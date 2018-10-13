@@ -2,15 +2,22 @@
 <html>
 <head>
 <script>
-function myFunction()
+function Answer()
 {
-    document.getElementById("frame").innerHTML="没有细胞核膜、细胞器膜等膜结构";
+    document.getElementById("answer").innerHTML="没有细胞核膜、细胞器膜等膜结构";
+}
+function ChangeQuestion()
+{
+	document.getElementById("question").innerHTML="为什么脂肪氧化分解比糖类消耗的氧气多？"
+	document.getElementById("answer").innerHTML=""
 }
 </script>
 </head>
 <body>
 	<h1>快背生物考点，别给小组丢脸！</h1>
-<p id="frame">制备细胞膜时为何用哺乳动物成熟的红细胞?</p>
-<button type="button" onclick="myFunction()">点我查看答案</button>
+	<p id="question">制备细胞膜时为何用哺乳动物成熟的红细胞?</p>
+	<p id="answer"></p>
+	<button type="button" onclick="Answer()">点我查看答案</button>
+	<button type="button" onclick="ChangeQuestion()">换一题</button>
 </body>
 </html>
