@@ -1,23 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<script>
-function Answer()
-{
-    document.getElementById("answer").innerHTML="没有细胞核膜、细胞器膜等膜结构";
-}
-function ChangeQuestion()
-{
-	document.getElementById("question").innerHTML="为什么脂肪氧化分解比糖类消耗的氧气多？"
-	document.getElementById("answer").innerHTML=""
+<meta charset="UTF-8">
+<title>生物考点及答案</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+<script type="text/javascript" src="assets/js/rem.js" ></script>
+<script type="text/javascript">
+function readFile(filename){
+var fso = new ActiveXObject("Scripting.FileSystemObject");
+var f = fso.OpenTextFile(filename,1);
+var s = "";
+while (!f.AtEndOfStream)
+s += f.ReadLine()+"\n";
+f.Close();
+return s;
 }
 </script>
+
 </head>
 <body>
-	<h1>快背生物考点，别给小组丢脸！</h1>
-	<p id="question">制备细胞膜时为何用哺乳动物成熟的红细胞?</p>
-	<p id="answer"></p>
-	<button type="button" onclick="Answer()">点我查看答案</button>
-	<button type="button" onclick="ChangeQuestion()">换一题</button>
+
+<div class="topic">
+	<div class="entrance-bottom">
+		<div class="topic-frameli"></div>
+		<div class="entrance-bottom-frame clearfix">
+		</div>
+	</div>
+</div>
+
+<script src="assets/js/index.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var data = new Array()
+	var que = readFile("que.txt")
+	var que_li = que.split('.')
+	var ans = readFile("ans.txt")
+	var ans_li = ans.split('.')
+/*
+	for (var i=0; i<115; i++)
+{
+	data.push({})
+}
+
+		window.onload = function(){
+	TiMu(data)
+}
+*/
+	document.getElementById("text").innerHTML(que)
+	
+</script>
+
+<div style="text-align:center;">
+
+</div>
+<p id="text">text</p>
 </body>
 </html>
