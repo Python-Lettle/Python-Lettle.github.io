@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>生物考点及答案</title>
+<!--
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <link rel="stylesheet" type="text/css" href="assets/css/css.css">
 <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
 <script type="text/javascript" src="assets/js/rem.js" ></script>
+-->
 <script type="text/javascript">
 function readFile(filename){
 var fso = new ActiveXObject("Scripting.FileSystemObject");
@@ -20,10 +22,43 @@ f.Close();
 return s;
 }
 </script>
-
+<script type="text/javascript">
+function getPage(pageURL) {
+    xmlhttp = createXMLHttp();
+    if (xmlhttp)
+    {
+        xmlhttp.onreadystatechange = setPageData;
+        xmlhttp.open('GET', pageURL);
+        xmlhttp.send(null);
+    }else{
+        alert("XMLHttpRequest对象为空");
+    }
+}
+//回调函数，获得从服务器回发的文档信息并显示在disp层中
+function setPageData(){
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+         var word = bytes2BSTR(xmlhttp.responseBody);
+        
+         document.getElementById("text").innerHTML = word ;
+    }
+}
+//创建XMLHttp对象，用于读取远程文档
+function createXMLHttp(){
+    try {
+        return new ActiveXObject ("Microsoft.XMLHTTP");
+    }catch(e){
+        try {
+            return new XMLHttpRequest();
+        }catch(e) {
+            return null;
+        }
+    }
+    return null;
+}
+</script>
 </head>
 <body>
-
+<!--
 <div class="topic">
 	<div class="entrance-bottom">
 		<div class="topic-frameli"></div>
@@ -31,11 +66,12 @@ return s;
 		</div>
 	</div>
 </div>
-
+-->
 <script src="assets/js/index.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
+	window.onload=function(){ getPage('test.txt'); }
 	var data = new Array()
-	var que = readFile("que.txt")
+	var que = getPage("que.txt")
 	var que_li = que.split('.')
 	var ans = readFile("ans.txt")
 	var ans_li = ans.split('.')
@@ -50,12 +86,12 @@ return s;
 }
 */
 	document.getElementById("text").innerHTML(que)
-	
 </script>
-
+<!--
 <div style="text-align:center;">
 
 </div>
+-->
 <p id="text">text</p>
 </body>
 </html>
