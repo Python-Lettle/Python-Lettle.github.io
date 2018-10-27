@@ -55,7 +55,7 @@ function TiMu(){
 				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)
 			}else{
 				var tHold = window.confirm(data[i].xuanxiang[0]);
-				if(thold){
+				if(tHold){
 					location.reload();
 				}else{
 					alert("刷新即可继续答题。")
