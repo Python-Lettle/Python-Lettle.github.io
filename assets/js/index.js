@@ -24,7 +24,7 @@ function TiMu(){
 		div3_id.innerHTML = "答案:";
 		var div4 = document.createElement("div");
 		div4.className = "entrance-bottom-frame-line-button-frame";
-		div4.innerHTML = data1[i].xuanxiang[0];
+		div4.innerHTML = "点我查看答案";
 		div3.appendChild(div3_id);
 		div3.appendChild(div4);
 		document.querySelectorAll(".entrance-bottom-frame-line")[0].appendChild(div3);
@@ -54,11 +54,11 @@ function TiMu(){
 				addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
 				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)
 			}else{
-				var tHold = alert(data[i].xuanxiang[0]);
+				alert("答案:"+data[i].xuanxiang[0]);
 				if(tHold){
 					location.reload();
 				}else{
-					alert("刷新即可继续答题。")
+					alert("刷新即可继续答题。");
 				}
 				
 
