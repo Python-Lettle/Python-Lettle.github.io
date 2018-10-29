@@ -53,15 +53,16 @@ function TiMu(){
 				document.querySelector(".topic-frameli").innerHTML = "第 " + "<div>" + select1 + "</div>" + " 题"
 				addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
 				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)
-			}/*else{
+			}else{
 				var tHold = alert(data[i].xuanxiang[0]);
 				if(tHold){
 					location.reload();
 				}else{
 					alert("刷新即可继续答题。")
-				*/
+				}
+				
 
-			//}
+			}
 		}
 	}
 }
