@@ -54,13 +54,14 @@ function TiMu(){
 				addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
 				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)
 			}else{
-				alert("答案:"+data[i].xuanxiang[0]);
+				alert("答案:"+data[i].xuanxiang[0])
+				/*
 				if(tHold){
 					location.reload();
 				}else{
 					alert("刷新即可继续答题。");
 				}
-				
+				*/
 
 			}
 		}
