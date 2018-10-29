@@ -54,7 +54,7 @@ function TiMu(){
 				addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
 				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)
 			}else{
-				var hold = alert("答案:"+data1[ii].xuanxiang[0])
+				var hold = confirm("答案:"+data1[ii].xuanxiang[0])
 				if(tHold){
 					location.reload();
 				}else{
