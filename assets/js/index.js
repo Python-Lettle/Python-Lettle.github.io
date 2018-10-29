@@ -30,8 +30,8 @@ function TiMu(){
 		document.querySelectorAll(".entrance-bottom-frame-line")[0].appendChild(div3);
 		//timu++
 	}
-	i = parseInt(168*Math.random());
-	DrawScreen(i);
+	ii = parseInt(168*Math.random());
+	DrawScreen(ii);
 	mintime = 1; 
 	var dact = document.querySelector(".entrance-bottom-frame-line")
 	var active = "active"
@@ -54,7 +54,7 @@ function TiMu(){
 				addClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id], active)
 				removeClass(document.querySelectorAll(".entrance-bottom-frame-line")[timu_id-1], active)
 			}else{
-				alert("答案:"+i+data1[i].xuanxiang[0])
+				alert("答案:"+ii+data1[ii].xuanxiang[0])
 				if(tHold){
 					location.reload();
 				}else{
