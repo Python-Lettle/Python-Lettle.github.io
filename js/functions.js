@@ -2,7 +2,6 @@ window.onload=function(){
 	if(typeof(Storage)!=="undefined"){
 	var vConsole = new VConsole();
 	//localStorage.clear();
-	
 	if(localStorage.i==1){
 		money=JSON.parse(localStorage.money);gold=JSON.parse(localStorage.gold);ore = JSON.parse(localStorage.ore);iron=JSON.parse(localStorage.iron);
 	}else{
@@ -19,6 +18,7 @@ window.onload=function(){
 	} else {document.getElementById("p").innerHTML="抱歉! 不支持 web 存储。";}
 
 	refresh();
+	solution = 0;
 };
 function save(){
 	localStorage.money=JSON.stringify(money);localStorage.gold=JSON.stringify(gold);localStorage.iron=JSON.stringify(iron);localStorage.ore=JSON.stringify(ore);localStorage.i=JSON.stringify(1);
@@ -84,6 +84,15 @@ function ship_dis(){clear();ship.style="display:block";}
 function warehouse_dis(){clear();warehouse.style = "display:block";}
 function universe_dis(){clear();universe.style = "display:block";}
 function dig(){ore += randomNum(1,10);tab_n[2].innerHTML=String(ore);}
+function add(){
+	if(solution <= 5 && ore>=10){
+	solution += 1;
+	ore-=10;
+	tab_n[0].innerHTML=String(iron);tab_n[1].innerHTML=String(gold);tab_n[2].innerHTML=String(ore);
+	sol=document.getElementById("solution");
+	sol.style="background-color:#996600;"+"height:"+String(50+10*solution)+"px;";
+	}
+}
 function screen(){
 	if(ore>=10){
 		ore-=10;
