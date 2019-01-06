@@ -90,14 +90,20 @@ function add(){
 	ore-=10;
 	tab_n[0].innerHTML=String(iron);tab_n[1].innerHTML=String(gold);tab_n[2].innerHTML=String(ore);
 	sol=document.getElementById("solution");
-	sol.style="background-color:#996600;"+"height:"+String(50+10*solution)+"px;";
-	}
+	if(solution==1){
+		sol.style="background-color:#CC9966;"+"height:"+String(50+10*solution)+"px";
+	}else if(solution==2){
+		sol.style="background-color:#996600;"+"height:"+String(50+10*solution)+"px";
+	}else{
+		sol.style="background-color:#663300;"+"height:"+String(50+10*solution)+"px";
+	}}
 }
 function screen(){
-	if(ore>=10){
-		ore-=10;
+	while(solution>0){
 		if(randomNum(0,1)==1){iron+=randomNum(1,3);}
 		if(randomNum(0,9)==1){gold+=1;}
+		solution -= 1;
+		sol.style="width:100px;height:50px;";
 		tab_n[2].innerHTML=String(ore);
 		tab_n[1].innerHTML=String(gold);
 		tab_n[0].innerHTML=String(iron);
