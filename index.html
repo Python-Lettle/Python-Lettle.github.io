@@ -10,10 +10,18 @@
 </head>
 <body>
 	<div id="main">
-	<div id="header">标题</div>
+	<div id="header">Word Worker</div>
 	<div id="body">
-		<div id="content">
-
+		<div id="play" class="menu">
+			<p id="word">Hello</p>
+			中文:<input type="text" id="Chinese" /><br>
+			<button class="button" id="submit" onclick="submit()">提交答案</button>
+			<button class="button" id="submit" onclick="logs()">查看记录</button>
+		</div>
+		<div id="log" class="menu" style="display:none">
+			<p>你看看你都背过什么</p>
+			<p id="logs"></p><br>
+			<button class="button" onclick="back()">返回</button>
 		</div>
 	</div>
 	<div id="footer">© 2018 Lettle, Inc.</div>
