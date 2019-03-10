@@ -5,26 +5,29 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
-	<title>背单词</title>
+	<title>生物考点</title>
 	<script src="js/functions.js"></script>
+	<script src="js/data.js"></script>
 </head>
 <body>
 	<div id="main">
-	<div id="header">Word Worker</div>
+	<div id="header">Biology</div>
 	<div id="body">
 		<div id="play" class="menu">
-			<p id="word">Hello</p>
-			中文:<input type="text" id="Chinese" /><br>
-			<button class="button" id="submit" onclick="submit()">提交答案</button>
-			<button class="button" id="submit" onclick="logs()">查看记录</button>
+			<p id="que">Hello</p>
+			答案:<input type="text" id="ans" /><br/>
+			<button class="button" id="submit" onclick="submit()">提交</button>
+			<button class="button" id="submit" onclick="logs()">查看记录</button><br/><br/>
+			<div>从:<input type="text" id="from" value="1"/>背到<input type="text" id="to" value="168"/></div>
 		</div>
 		<div id="log" class="menu" style="display:none">
-			<p>你看看你都背过什么</p>
-			<p id="logs"></p><br>
+			<p>你看看你都回答过什么答案</p>
+			<p id="logs"></p><br/>
 			<button class="button" onclick="back()">返回</button>
+			<button class="button" onclick="cleanlog()">清空log</button>
 		</div>
 	</div>
-	<div id="footer">© 2018 Lettle, Inc.</div>
+	<div id="footer">© 2019 Lettle, Inc.<br />QQ:1071445082</div>
 	</div>
 </body>
 </html>
