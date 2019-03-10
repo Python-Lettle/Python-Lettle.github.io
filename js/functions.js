@@ -17,21 +17,20 @@ function indexof(arr,item){
     }
 };
 function submit(){
-	log_n++
-	console.log(log_n)
 	min = Number(document.getElementById("from").value);
 	max = Number(document.getElementById("to").value);
 	if(now!=0){
 		ques = document.getElementById("que").innerHTML;
 		answ = document.getElementById("ans").value;
-		if(log_n==15){log_n=0;cleanlog();}
+		if(log_n==10){log_n=0;cleanlog();}
 		document.getElementById("logs").innerHTML += String(now) + "-" + ques + "-" + answ + "<br/>";
 		document.getElementById("answer").innerHTML = data[now-1]["ans"][0]
+		log_n++
 	};
 	now = randomNum(min,max);
 	document.getElementById("que").innerHTML = data[now-1]["que"];
 	document.getElementById("ans").value = "";
-	
+	console.log(log_n)
 	
 };
 function randomNum(minNum,maxNum){ 
