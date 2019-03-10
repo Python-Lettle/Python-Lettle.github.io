@@ -16,13 +16,14 @@
 		<div id="play" class="menu">
 			<p id="que">Hello</p>
 			答案:<input type="text" id="ans" /><br/>
+			上一个正确答案:<p id="answer"></p>
 			<button class="button" id="submit" onclick="submit()">提交</button>
 			<button class="button" id="submit" onclick="logs()">查看记录</button><br/><br/>
 			<div>从:<input type="text" id="from" value="1"/>背到<input type="text" id="to" value="168"/></div>
 		</div>
 		<div id="log" class="menu" style="display:none">
 			<p>你看看你都回答过什么答案</p>
-			<p id="logs"></p><br/>
+			<p id="logs"></p>
 			<button class="button" onclick="back()">返回</button>
 			<button class="button" onclick="cleanlog()">清空log</button>
 		</div>
